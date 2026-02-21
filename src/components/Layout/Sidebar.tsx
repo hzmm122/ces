@@ -11,6 +11,25 @@ const navItems = [
   { path: '/review', label: '量化复盘', icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' },
 ];
 
+const shortTermReviewItems = [
+  { path: '/short-term/core-market', label: '核心大盘' },
+  { path: '/short-term/limit-up-tier', label: '涨停梯队' },
+  { path: '/short-term/limit-up-themes', label: '涨停题材' },
+  { path: '/short-term/broken-pool', label: '炸板池' },
+  { path: '/short-term/limit-down-pool', label: '跌停池' },
+  { path: '/short-term/large-drawdown', label: '大幅回撤' },
+  { path: '/short-term/big-noodles-pool', label: '大面池' },
+  { path: '/short-term/large-surge', label: '大幅拉升' },
+  { path: '/short-term/big-meat-pool', label: '大肉池' },
+];
+
+const sentimentAnalysisItems = [
+  { path: '/sentiment/core-leader-tracking', label: '核心龙头追踪' },
+  { path: '/sentiment/leader-cycle-overview', label: '龙头周期全景图' },
+  { path: '/sentiment/short-cycle-analysis', label: '短线周期分析' },
+  { path: '/sentiment/anomaly-monitoring', label: '异动数据预测/监控' },
+];
+
 const navExpandableItems = [
   { 
     key: 'shortTerm', 
@@ -30,25 +49,6 @@ const quickAccessItems = [
   { path: '/sentiments', label: '舆情列表', icon: 'M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z', color: 'from-blue-500 to-cyan-400' },
   { path: '/sources', label: '数据源', icon: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4', color: 'from-purple-500 to-pink-400' },
   { path: '/monitor', label: '监测中心', icon: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z', color: 'from-orange-500 to-red-400' },
-];
-
-const shortTermReviewItems = [
-  { path: '/short-term/core-market', label: '核心大盘' },
-  { path: '/short-term/limit-up-tier', label: '涨停梯队' },
-  { path: '/short-term/limit-up-themes', label: '涨停题材' },
-  { path: '/short-term/broken-pool', label: '炸板池' },
-  { path: '/short-term/limit-down-pool', label: '跌停池' },
-  { path: '/short-term/large-drawdown', label: '大幅回撤' },
-  { path: '/short-term/big-noodles-pool', label: '大面池' },
-  { path: '/short-term/large-surge', label: '大幅拉升' },
-  { path: '/short-term/big-meat-pool', label: '大肉池' },
-];
-
-const sentimentAnalysisItems = [
-  { path: '/sentiment/core-leader-tracking', label: '核心龙头追踪' },
-  { path: '/sentiment/leader-cycle-overview', label: '龙头周期全景图' },
-  { path: '/sentiment/short-cycle-analysis', label: '短线周期分析' },
-  { path: '/sentiment/anomaly-monitoring', label: '异动数据预测/监控' },
 ];
 
 const timeRanges = [

@@ -1,6 +1,5 @@
 import { create } from 'zustand';
-import { SentimentItem, Statistics, FilterState } from '../types';
-import { getMarketSentiment, getStatistics } from '../services/freeApi';
+import type { SentimentItem, Statistics, FilterState } from '../types';
 
 interface SentimentStore {
   sentiments: SentimentItem[];
@@ -25,19 +24,21 @@ const defaultFilters: FilterState = {
   relatedStocks: [],
 };
 
+const defaultStatistics: Statistics = {
+  totalCount: 0,
+  todayCount: 0,
+  yesterdayCount: 0,
+  positiveRatio: 0,
+  negativeRatio: 0,
+  neutralRatio: 0,
+  hotTopics: [],
+  sourceDistribution: [],
+  trendData: [],
+};
+
 export const useSentimentStore = create<SentimentStore>((set, get) => ({
   sentiments: [],
-  statistics: {
-    totalCount: 0,
-    todayCount: 0,
-    yesterdayCount: 0,
-    positiveRatio: 0,
-    negativeRatio: 0,
-    neutralRatio: 0,
-    hotTopics: [],
-    sourceDistribution: [],
-    trendData: [],
-  },
+  statistics: defaultStatistics,
   filters: defaultFilters,
   sidebarCollapsed: false,
   loading: false,
@@ -46,7 +47,7 @@ export const useSentimentStore = create<SentimentStore>((set, get) => ({
   fetchData: () => {
     set({ loading: true });
     
-    setTimeout(() => {
+    import('../services/freeApi').then(({ getMarketSentiment, getStatistics }) => {
       const sentiments = getMarketSentiment();
       const statistics = getStatistics();
       
@@ -56,7 +57,9 @@ export const useSentimentStore = create<SentimentStore>((set, get) => ({
         lastUpdate: new Date().toISOString(),
         loading: false,
       });
-    }, 500);
+    }).catch(() => {
+      set({ loading: false });
+    });
   },
 
   setFilters: (newFilters) => {

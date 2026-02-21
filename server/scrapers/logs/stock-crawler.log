@@ -1,0 +1,7 @@
+[2026-02-21T09:07:20.571Z] [INFO] Scheduler started - {"morningTime":"11:30","afternoonTime":"15:00"}
+[2026-02-21T09:07:21.364Z] [INFO] Scheduler started - {"morningTime":"11:30","afternoonTime":"15:00"}
+[2026-02-21T09:07:42.970Z] [INFO] Scheduler started - {"morningTime":"11:30","afternoonTime":"15:00"}
+[2026-02-21T09:08:41.518Z] [INFO] Starting stock data crawl - {"url":"https://www.cnfin.com/quote/stock/index.html"}
+[2026-02-21T09:08:41.520Z] [INFO] Fetching data (attempt 1/3) - {"url":"https://www.cnfin.com/quote/stock/index.html?code=SS.ESA.M%2CSZ.ESA.M%2CSZ.ESA.SMSE%2CSZ.ESA.GEM%2CSS.KSH%2CSZ.ESA.SMSE&t=1&idx=0&curmb=%E8%82%A1%E7%A5%A8%2C%E6%B2%AA%E5%B8%82A%E8%82%A1&announ=lc&leftnav=0"}
+[2026-02-21T09:08:41.746Z] [WARNING] No stock data found in HTML, generating sample data
+[2026-02-21T09:08:41.748Z] [INFO] Stock data crawl completed successfully - {"dataCount":10,"duration":"230ms","retryCount":0}

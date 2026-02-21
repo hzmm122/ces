@@ -10,4 +10,16 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    minify: 'esbuild',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'echarts': ['echarts', 'echarts-for-react'],
+          'zustand': ['zustand'],
+        },
+      },
+    },
+  },
 })
